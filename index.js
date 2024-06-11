@@ -1,3 +1,13 @@
-// run `node index.js` in the terminal
+//require('dotenv').config({path:'./env'})
+import dotenv from "dotenv";
+import connectDB from "./src/db/index.js";
 
-console.log(`Hello Node.js v${process.versions.node}!`);
+dotenv.config({
+    path:'./env'
+})
+const app = express()
+
+connectDB()
+.then(()=> {
+    
+})
